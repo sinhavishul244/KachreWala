@@ -1,0 +1,56 @@
+/* all properties */
+/* @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Noto+Sans&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* root variables  */
+:root {
+    /* colors  */
+    --primary-green: #82CD47;
+    --secondary-blue: #12C1D9;
+    --primary-black: rgb(5, 9, 2);
+    --primary-black-75: rgba(5, 9, 2, 0.75);
+    --primary-black-50: rgba(5, 9, 2, 0.50);
+    --primary-black-25: rgba(5, 9, 2, 0.25);
+    --primary-black-10: rgba(5, 9, 2, 0.10);
+
+    /* fonts */
+    --primary-font: 'Days One', sans-serif;
+    --secondary-font: 'Noto Sans', sans-serif;
+}
+
+/* code for top navigation 
+#################################################### */
+.top-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* container for logo */
+.top-navigation .left-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.top-navigation .left-logo h2 {
+    font-family: var(--primary-font);
+    color: var(--primary-black-75);
+    font-size: 1.375rem;
+
+}
+
+
+.top-navigation .left-logo img {
+    width: 1.875rem;
+    /* border: 2px solid red; */
+}
+
+/* user icon */
+.user-img {}
