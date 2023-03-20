@@ -20,15 +20,59 @@
 </head>
 
 <body>
-    <div class="top-navigation">
-        <div class="left-logo">
-            <img src="../../assets/logo_kachrewala.png" alt="">
-            <h2>KachreWala</h2>
-        </div>
-        <div class="user-img">
-            <img src="../../assets/user-img.png" alt="">
-        </div>
+    <div class="maincontainer">
+        <!-- code for top navigation bar  -->
+        <div class="top-navigation">
+            <div class="left-logo">
+                <img src="../../assets/logo_kachrewala.png" alt="">
+                <h2>KachreWala</h2>
+            </div>
+            <div class="user-img">
+                <img src="../../assets/user-img.png" alt="">
+            </div>
+        </div> <!-- end of top navigation bar -->
+
+
+
+        <!-- card for weather and city information  -->
+        <div class="home-weather">
+
+            <div class="weather-left-information">
+                <h1 class="cityname">Jaipur</h1>
+                <img src="../../assets/weather/sun-logo.png" alt="" class="weather-icon">
+                <div class="info">
+                    <p>
+                        Sunny 25° Celcius
+                    </p>
+                    <p>
+                        <strong> AQI :</strong> 35
+                    </p>
+                </div>
+            </div>
+            <!-- this will have the monument from the city  -->
+            <div class="city-png">
+            </div>
+
+        </div> <!-- end of end of weather card -->
+
+
+        <!-- code for swiper menu  -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Hello there</div>
+                <div class="swiper-slide">Slide 2</div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div> <!-- end of swiper -->
+
     </div>
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="home.js"></script>
 </body>
 
 </html>

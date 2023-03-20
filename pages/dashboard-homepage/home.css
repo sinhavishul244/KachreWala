@@ -23,12 +23,28 @@
     --secondary-font: 'Noto Sans', sans-serif;
 }
 
+/* code for main container 
+##################################################### */
+.maincontainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
 /* code for top navigation 
 #################################################### */
 .top-navigation {
+    /* border: 2px solid; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0rem 0.5rem;
+    position: sticky;
+    top: 0;
 }
 
 /* container for logo */
@@ -54,3 +70,89 @@
 
 /* user icon */
 .user-img {}
+
+
+/* code for weather card 
+############################################# */
+.home-weather {
+    /* margin-top: 1rem; */
+    display: flex;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    background: linear-gradient(109.93deg, #FDA085 7.15%, #F6D365 92.49%);
+    border-radius: 27px;
+    /* width: 371px; */
+    height: 231px;
+
+
+    filter: drop-shadow(0px 120px 48px rgba(0, 0, 0, 0.03)) drop-shadow(0px 67px 40px rgba(0, 0, 0, 0.09)) drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.15)) drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.18)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.18));
+}
+
+/* code for left text  */
+
+.home-weather .weather-left-information {
+    display: grid;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 90%;
+    padding: 8px 16px;
+}
+
+/* code for city name  */
+.home-weather .weather-left-information h1 {
+    font-family: var(--primary-font);
+    mix-blend-mode: overlay;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.8rem;
+    margin-bottom: -0.8rem;
+    /* line-height: 81px; */
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.home-weather .weather-left-information .info p {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: var(--primary-black-75);
+}
+
+.city-png {
+    position: absolute;
+    /* border: 2px solid red; */
+    right: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateY(10%);
+    background-size: cover;
+    background-image: url("../../assets/weather/cities/jaipur.png");
+}
+
+
+/* code for swiper slide
+#####################################  */
+.swiper {
+    border: 2px solid red;
+    width: 100%;
+    height: 200px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 300px;
+    background-color: purple;
+    /* background: #fff; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
