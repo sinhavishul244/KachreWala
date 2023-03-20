@@ -1,0 +1,136 @@
+.logo {
+    position: absolute;
+    width: 25%;
+    left: 23rem;
+    top: 15.732rem;
+    z-index: 10;
+}
+#grad1{
+    position: absolute;
+width: 100%;
+height: 40%;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(180deg, rgba(68, 255, 0, 0.432) -57.57%, rgba(255, 255, 255, 0.55) 121.22%);
+}
+#grad2{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0px;
+    top: 900px;
+    
+    background: linear-gradient(178.53deg, #42FF00 -54.88%, rgba(255, 255, 255, 0.338) 95.87%);
+    transform: rotate(-180deg);
+}
+:root{
+    --primary-font:'Days One',sans-serif;
+    --secondary-font:'Noto Sans',sans-serif;
+}
+#text {
+    position: absolute;
+    width: 348px;
+    height: 111px;
+    left: 13.9rem;
+    top: 28.125rem;
+z-index: 10;
+    font-family: 'Days One';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80.9761px;
+    line-height: 111px;
+    color: rgba(5, 9, 2, 0.75);
+}
+
+
+#motto {
+    position: absolute;
+    width: 21.75rem;
+    height: 111px;
+    left: 25.6rem;
+    top: 34.375rem;
+    font-family: 'Days One';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.9761px;
+    line-height: 111px;
+    z-index: 10;
+}
+
+
+.pic {
+    position: absolute;
+
+    /* width: 40%; */
+    left: 24.9rem;
+    top: 44rem;
+    z-index: 10;
+}
+
+.Login {
+    position: absolute;
+    width: 20rem;
+    height: 5rem;
+    left: 21rem;
+    top: 67.375rem;
+    z-index: 10;
+    /* secondary blue */
+
+    background: #12C1D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.Signin {
+    position: absolute;
+    width: 20rem;
+    height: 5rem;
+    left: 21rem;
+    top: 77.375rem;
+z-index: 10;
+    /* secondary blue */
+
+    background: #12C1D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+}
+
+.log {
+    position: absolute;
+    width: 99px;
+    height: 38px;
+    left: 25.5rem;
+    top: 66.375rem;
+z-index: 15;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+}
+
+.sign {
+    position: absolute;
+    width: 99px;
+    height: 38px;
+    left: 25.5rem;
+    top: 76.375rem;
+z-index: 15;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+}
