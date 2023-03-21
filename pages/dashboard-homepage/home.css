@@ -24,6 +24,12 @@
     --secondary-font: 'Noto Sans', sans-serif;
 }
 
+
+
+
+
+
+
 /* code for main container 
 ##################################################### */
 .maincontainer {
@@ -36,6 +42,137 @@
     overflow-y: scroll;
     height: 100vh;
     /* border: 2px solid purple; */
+}
+
+/* code for to stats bar 
+####################################################33 */
+.userInfo {
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 2px solid red; */
+    width: 100vw;
+    height: 40vh;
+    background-color: white;
+    z-index: 200;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.stats-maincontainer {
+    margin-left: 1.5rem;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.broombg {
+    position: absolute;
+    right: -27%;
+    top: 4%;
+    z-index: -1;
+    transform-origin: top;
+    animation: broom 3s infinite linear;
+    opacity: 0.35;
+
+}
+
+
+.userDP-stats {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+.stats-crossbtn {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+}
+
+.userInfo h1 {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36.8537px;
+    line-height: 50px;
+
+    /* primary black */
+
+    color: #050902;
+}
+
+.userInfo h3 {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.0915px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    /* black 75 */
+
+    color: rgba(5, 9, 2, 0.75);
+}
+
+.lowersection {
+    display: grid;
+    gap: 0.4rem;
+
+}
+
+.gamepoints,
+.plasticDecomposed {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gamepoints_texts {
+    display: grid;
+}
+
+.gamepoints_texts p {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.0915px;
+    line-height: 21px;
+
+    /* primary black */
+
+    color: #050902;
+}
+
+.points {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px !important;
+    line-height: 10px !important;
+
+    /* black 75 */
+
+    color: rgba(5, 9, 2, 0.75) !important;
+}
+
+.gamestat_progressbar {
+    width: 165px;
+    height: 11px;
+    background: #D9D9D9;
+}
+
+.progressbar_progress {
+    height: 100%;
+    width: 41.6666666667%;
+    background: #EFC348;
 }
 
 /* code for top navigation 
@@ -72,6 +209,20 @@
     width: 1.875rem;
     /* border: 2px solid red; */
 }
+
+.userDP {
+    width: 2.3rem;
+    height: 2.3rem;
+    /* height: 1rem; */
+    /* border: 2px solid red; */
+    /* background-color: yellow; */
+    background: url("../../assets/users/user-image.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+}
+
+
 
 /* user icon */
 .user-img {}
@@ -235,9 +386,18 @@
     background-color: white;
     position: fixed;
     bottom: 0;
-    height: 20%;
+    /* height: 20%; */
     width: 100%;
     z-index: 20;
+    gap: 1rem;
+    padding-top: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.uparrow {
+    transform-origin: center;
+    transition: all 0.3s ease-out;
+
 }
 
 .scan {
@@ -255,4 +415,133 @@
     background: #12C1D9;
     box-shadow: 0px 48px 19px rgba(0, 0, 0, 0.02), 0px 27px 16px rgba(0, 0, 0, 0.07), 0px 12px 12px rgba(0, 0, 0, 0.12), 0px 3px 7px rgba(0, 0, 0, 0.14), 0px 0px 0px rgba(0, 0, 0, 0.14);
     border-radius: 100%;
+}
+
+.or {
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-black-50);
+    margin-bottom: 1rem;
+}
+
+.line {
+    border: 1px solid var(--primary-black-25);
+    width: 40px;
+    margin: 0rem 0.5rem;
+    height: 1px;
+}
+
+.entercodeinput {
+    width: 239px;
+    height: 47px;
+    left: 78px;
+    top: 771px;
+
+    background: rgba(217, 217, 217, 0.8);
+    border-radius: 17px;
+    border: none;
+}
+
+.entercodeinput::placeholder {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+}
+
+.toggleablecontent {
+    /* outline: 2px solid green; */
+    outline-offset: -2px;
+    padding-bottom: 10px;
+}
+
+/* code for darkness
+#################################### */
+
+.darknessWhenToggle {
+    position: absolute;
+    top: 0;
+    /* border: 2px solid red; */
+    height: 100vh;
+    z-index: 10;
+    width: 100vw;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+}
+
+#scanner {
+    top: 0;
+    left: 0;
+    position: absolute;
+    outline: 2px solid black;
+    outline-offset: -2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    /* display: block; */
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+
+}
+
+button[class="html5-qrcode-element"] {
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    border-radius: 27px;
+    margin: 1rem;
+    background-color: var(--secondary-blue);
+    border: none;
+    padding: 8px 16px;
+}
+
+/* query for preloader 
+################################### */
+/* query for preloader gif  
+####################################################*/
+
+
+#preloader {
+    /* transition: all 2s ease; */
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    /* border: 2px solid yellow; */
+    background-color: #fdf4ce;
+    /* color: blueviolet; */
+    z-index: 10000;
+    transition: all 0.5s ease-out;
+
+}
+
+.loadingscreenstuff {
+    /* border: 2px solid blue; */
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* display: flex; */
+}
+
+.preloader_loader_img {
+    height: 20vh;
+    /* width: 40vh; */
+    position: absolute;
+
+
 }

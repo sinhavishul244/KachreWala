@@ -57,3 +57,138 @@ function swipedetect(el, callback) {
         e.preventDefault()
     }, false)
 }
+
+
+// code for the scan qr button 
+let extra = document.querySelector(".toggleablecontent");
+let extraHeight = extra.offsetHeight;
+console.log(extraHeight);
+
+const dock = document.querySelector(".dock");
+dock.style.transform = `translateY(${extraHeight}px)`
+
+let uparrow = document.querySelector(".uparrow");
+let darkScreen = document.querySelector(".darknessWhenToggle");
+
+let topNavDown = false;
+const topstats = document.querySelector(".userInfo");
+const userLogo = document.getElementById("userimg");
+const crossbtn = document.querySelector(".stats-crossbtn"); 9n
+
+
+let toggleState = false;
+const toggleFunction = () => {
+    if (toggleState == false) {
+        toggleState = true;
+        dock.style.transform = `translateY(0px)`
+        uparrow.style.transform = `rotate(180deg)`
+        darkScreen.style.opacity = 0.85;
+        darkScreen.style.visibility = `visible`;
+
+
+    }
+    else {
+        toggleState = false;
+        dock.style.transform = `translateY(${extraHeight}px)`
+        uparrow.style.transform = `rotate(0deg)`
+        darkScreen.style.visibility = `hidden`;
+
+        darkScreen.style.opacity = 0;
+
+    }
+}
+uparrow.addEventListener("click", toggleFunction);
+let scanWindow = document.querySelector("#scanner");
+
+darkScreen.onclick = () => {
+    toggleState = false;
+    dock.style.transform = `translateY(${extraHeight}px)`
+    uparrow.style.transform = `rotate(0deg)`
+    darkScreen.style.visibility = `hidden`;
+
+    darkScreen.style.opacity = 0;
+
+    topNavDown = false;
+    topstats.style.transform = "translateY(-100%)"
+    darkScreen.style.opacity = 0;
+    darkScreen.style.visibility = `hidden`;
+}
+
+const scanBtn = document.querySelector(".scan")
+scanBtn.addEventListener("click", () => {
+    scanWindow.style.visibility = 'visible'
+    scanWindow.style.opacity = '1'
+})
+
+
+// swipedetect(dock, function (swipedir) {
+//     if (swipedir == "top") {
+//         toggleState = true;
+//         dock.style.transform = `translateY(0px)`
+//         uparrow.style.transform = `rotate(180deg)`
+
+//     }
+//     else {
+//         toggleState = false;
+//         dock.style.transform = `translateY(${extraHeight}px)`
+//         uparrow.style.transform = `rotate(0deg)`
+//     }
+// })
+
+
+const scanner = new Html5QrcodeScanner('scannerChild', {
+    qrbox: {
+        width: 500,
+        height: 500,
+    },
+    fps: 20,
+})
+
+scanner.render(success, error);
+
+function success(result) {
+
+}
+
+function error(err) {
+    console.error(err)
+}
+
+
+// code for preloader 
+var loader = document.getElementById("preloader");
+
+const loading_func = () => {
+    loader.style.opacity = "0"
+    loader.style.visibility = "hidden";
+
+}
+
+const temp = () => { setTimeout(loading_func, 3000); }
+
+window.addEventListener("load", temp);
+
+// code for user information 
+
+userLogo.addEventListener("click", () => {
+    if (topNavDown == false) {
+        topNavDown = true;
+        topstats.style.transform = "translateY(0%)"
+        darkScreen.style.opacity = 0.85;
+        darkScreen.style.visibility = `visible`;
+    }
+    else {
+        topNavDown = false;
+        topstats.style.transform = "translateY(-100%)"
+        darkScreen.style.opacity = 0;
+        darkScreen.style.visibility = `hidden`;
+    }
+})
+
+
+crossbtn.onclick = () => {
+    topNavDown = false;
+    topstats.style.transform = "translateY(-100%)"
+    darkScreen.style.opacity = 0;
+    darkScreen.style.visibility = `hidden`;
+}

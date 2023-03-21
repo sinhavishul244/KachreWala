@@ -20,15 +20,60 @@
 </head>
 
 <body>
-    <div class="maincontainer">
+
+    <div class="userInfo">
+        <div class="stats-maincontainer">
+
+            <div class="uppersection">
+                <div class="user-img">
+                    <!-- <img src="../../assets/user-img.png" alt=""> -->
+                    <div class="userDP userDP-stats"></div>
+                </div>
+                <h1>Hi Amandeep,</h1>
+                <h3>Together we can keep out city clean !</h3>
+            </div>
+
+            <div class="lowersection">
+                <div class="gamepoints">
+                    <img src="../../assets/shield.png" alt="">
+                    <div class="gamepoints_texts">
+                        <p>Level 15 : Safai Sainik</p>
+                        <div class="gamestat_progressbar">
+                            <div class="progressbar_progress"></div>
+                        </div>
+                        <p class="points">1225/1500</p>
+                    </div>
+                </div>
+                <div class="plasticDecomposed">
+                    <img src="../../assets/plastic-bag.png" alt="">
+                    <p>Plastics Decomposed : 155</p>
+
+                </div>
+                <div class="plasticDecomposed">
+                    <img src="../../assets/setting.png" alt="">
+                    <p>Account settings</p>
+
+                </div>
+            </div>
+        </div>
+
+        <img src="../../assets/broomlogo1.png" alt="" class="broombg">
+
+        <img src="../../assets/cross.png" alt="" class="stats-crossbtn">
+
+
+    </div>
+
+    <div class="maincontainer" id="maincontainer">
         <!-- code for top navigation bar  -->
         <div class="top-navigation">
             <div class="left-logo">
                 <img src="../../assets/logo_kachrewala.png" alt="">
                 <h2>KachreWala</h2>
             </div>
-            <div class="user-img">
-                <img src="../../assets/user-img.png" alt="">
+            <div class="user-img" id="userimg">
+                <!-- <img src="../../assets/user-img.png" alt=""> -->
+                <div class="userDP"></div>
             </div>
         </div> <!-- end of top navigation bar -->
 
@@ -93,9 +138,11 @@
 
     </div> <!-- end of main body container -->
 
+    <div class="darknessWhenToggle"></div>
+
     <div class="dock">
 
-        <img src="../../assets/up-arrow.png" alt="">
+        <img src="../../assets/up-arrow.png" alt="" class="uparrow">
 
         <div class="dock_main_container">
             <div class="dockicons">
@@ -105,12 +152,30 @@
             </div>
         </div>
 
-        <div class="or">
-            <div class="line"></div>
-            <p>OR</p>
-            <div class="line"></div>
+        <div class="toggleablecontent">
+            <div class="or">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+
+            <input type="text" placeholder="Enter code" class="entercodeinput">
         </div>
 
+    </div>
+
+
+
+    <div id="scanner">
+        <div id="scannerChild"></div>
+    </div>
+
+    <!-- preloader div-->
+    <div id="preloader">
+        <div class="center_stuff loadingscreenstuff">
+            <!-- <h2>spaceV is loading</h2> -->
+            <img src="../../assets/loader_Kachrawala.gif" class="preloader_loader_img" alt="" srcset="  ">
+        </div> <!-- loadingscreenstuff ends -->
     </div>
 
     <!-- Swiper JS -->
@@ -118,7 +183,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+    <!-- script for html5 qrcode  -->
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
     <script src="home.js"></script>
 </body>
+
 
 </html>
